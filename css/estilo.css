@@ -1,0 +1,108 @@
+/* Reset e base */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Imagem de fundo */
+.bg-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cabeçalho transparente com borda branca, logo, textos e botão */
+.header-overlay {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  min-height: 50px;
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  border: 2px solid #ffffff; /* borda branca sólida */
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+/* Logo com margem à esquerda */
+.logo {
+  height: 40px;
+  width: auto;
+  margin-left: 24px;
+}
+
+/* Textos centrais com espaçamento maior */
+.nav-texts {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-item {
+  color: #ffffff;
+  font-size: 1vw;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Botão "Baixe agora" à direita */
+.download-button {
+  background-color: #ffffff;       /* fundo branco sólido */
+  color: #005067;                  /* texto azul */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 1vw;
+  margin-right: 24px;
+  border: none;
+  box-shadow: none;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+  .header-overlay {
+    padding: 6px 8px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: 1.5px solid #ffffff;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logo {
+    height: 30px;
+    margin-left: 12px;
+  }
+
+  .nav-texts {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-item {
+    font-size: 4vw;
+  }
+
+  .download-button {
+    font-size: 3.5vw;
+    padding: 6px 14px;
+    margin-right: 0;
+  }
+}
