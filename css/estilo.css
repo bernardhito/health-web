@@ -21,10 +21,10 @@ html, body {
   display: block;
 }
 
-/* Cabeçalho fixo no topo com margem e borda arredondada */
+/* Cabeçalho normal (não fixo) */
 .header-overlay {
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
   width: 99%;
@@ -100,7 +100,7 @@ html, body {
 }
 
 .intro-title {
-  font-size: 3vw;
+  font-size: 70px;
   color: #ffffff;
   font-weight: 600;
   line-height: 1.3;
@@ -115,14 +115,21 @@ html, body {
   margin-bottom: 2rem;
 }
 
+/* Botões lado a lado */
+.intro-buttons {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 .intro-button {
   background-color: #ffffff;
   color: #005067;
   text-decoration: none;
   font-weight: 600;
-  padding: 22px 48px; /* ← botão maior vertical e horizontal */
+  padding: 32px 48px; /* ← aumentado verticalmente */
   border-radius: 50px;
-  font-size: 1.8vw; /* ← fonte maior */
+  font-size: 1.8vw;
   border: none;
   box-shadow: none;
   transition: background-color 0.3s ease;
@@ -133,20 +140,21 @@ html, body {
   background-color: #f0f0f0;
 }
 
-/* Imagem do celular com tamanho ainda maior */
+/* Imagem do celular com tamanho absoluto */
 .intro-image {
   flex: 1;
   min-width: 280px;
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 10px;
 }
 
 .iphone-mockup {
-  width: clamp(1000px, 85vw, 2800px); /* ← imagem maior naturalmente e responsiva */
+  width: 1600px;
   height: auto;
+  object-fit: contain;
 }
 
 /* Responsividade */
@@ -202,9 +210,15 @@ html, body {
     font-size: 4vw;
   }
 
+  .intro-buttons {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
   .intro-button {
     font-size: 5vw;
-    padding: 18px 40px;
+    padding: 28px 40px; /* ← aumentado verticalmente no mobile também */
     background-color: #ffffff;
   }
 
