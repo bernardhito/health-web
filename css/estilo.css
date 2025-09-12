@@ -7,21 +7,20 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Wrapper que permite rolagem */
+/* Wrapper */
 .background-wrapper {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-/* Imagem de fundo rolável */
 .bg-image {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Cabeçalho normal (não fixo) */
+/* Header */
 .header-overlay {
   position: absolute;
   top: 60px;
@@ -33,21 +32,17 @@ html, body {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 50px;
   border: 2px solid #ffffff;
-  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
 }
 
-/* Logo ampliada */
 .logo {
   height: 70px;
-  width: auto;
   margin-left: 24px;
 }
 
-/* Textos centrais */
 .nav-texts {
   display: flex;
   gap: 4rem;
@@ -59,7 +54,6 @@ html, body {
   font-weight: 500;
 }
 
-/* Botão "Baixe agora" */
 .download-button {
   background-color: #ffffff;
   color: #005067;
@@ -70,11 +64,9 @@ html, body {
   font-size: 1.2vw;
   margin-right: 24px;
   border: none;
-  box-shadow: none;
-  transition: background-color 0.3s ease;
 }
 
-/* Seção de introdução com layout em duas colunas */
+/* Intro */
 .intro-section {
   position: absolute;
   top: 3.5%;
@@ -85,7 +77,6 @@ html, body {
 
 .intro-grid {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   gap: 4vw;
   flex-wrap: wrap;
@@ -96,7 +87,6 @@ html, body {
   min-width: 280px;
   text-align: left;
   padding: 20px;
-  margin-top: 0px;
 }
 
 .intro-title {
@@ -115,10 +105,9 @@ html, body {
   margin-bottom: 2rem;
 }
 
-/* Botões lado a lado */
 .intro-buttons {
   display: flex;
-  gap: 24px;
+  gap: 96px;
   flex-wrap: wrap;
 }
 
@@ -126,21 +115,26 @@ html, body {
   background-color: #ffffff;
   color: #005067;
   text-decoration: none;
-  font-weight: 600;
-  padding: 32px 48px; /* ← aumentado verticalmente */
-  border-radius: 50px;
-  font-size: 1.8vw;
+  font-weight: 500;
+  padding: 16px 48px;
+  border-radius: 100px;
+  font-size: 1vw;
   border: none;
-  box-shadow: none;
-  transition: background-color 0.3s ease;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
 }
 
 .intro-button:hover {
   background-color: #f0f0f0;
 }
 
-/* Imagem do celular com tamanho absoluto */
+.store-logo {
+  width: 56px;
+  height: auto;
+}
+
 .intro-image {
   flex: 1;
   min-width: 280px;
@@ -157,74 +151,85 @@ html, body {
   object-fit: contain;
 }
 
-/* Responsividade */
+/* Seção "O que é" + logo */
+.section-what-is-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  margin-top: 440px;
+  padding: 20px;
+}
+
+.what-is-text {
+  font-size: 3vw;
+  color: #005067;
+  font-weight: 600;
+}
+
+.what-is-inline-logo {
+  width: 520px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Texto explicativo abaixo */
+.what-is-description {
+  text-align: center;
+  font-size: 1.8vw;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 20px;
+  padding: 0 40px;
+}
+
+/* Imagem iphonecertobuppy */
+.buppy-image-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.buppy-image {
+  width: 100vw;       /* ← imagem gigante */
+  max-width: 1600px;
+  height: auto;
+}
+
+/* Responsivo */
 @media (max-width: 600px) {
-  .header-overlay {
-    flex-direction: column;
-    gap: 8px;
-    border-radius: 20px;
-    border: 1.5px solid #ffffff;
-    padding: 6px 8px;
-    top: 10px;
-    width: 95%;
-  }
-
-  .logo {
-    height: 40px;
-    margin-left: 12px;
-  }
-
-  .nav-texts {
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .nav-item {
-    font-size: 4vw;
-  }
-
-  .download-button {
-    font-size: 3.5vw;
-    padding: 6px 14px;
-    margin-right: 0;
-    background-color: #ffffff;
-  }
-
-  .intro-section {
-    top: 6%;
-    left: 5%;
-    width: 90%;
-  }
-
-  .intro-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .intro-title {
-    font-size: 6vw;
-  }
-
-  .intro-description {
-    font-size: 4vw;
-  }
-
-  .intro-buttons {
+  .section-what-is-inline {
     flex-direction: column;
     gap: 16px;
-    align-items: center;
+    margin-top: 320px;
   }
 
-  .intro-button {
+  .what-is-text {
+    font-size: 6vw;
+    color: #005067;
+  }
+
+  .what-is-inline-logo {
+    width: 320px;
+  }
+
+  .what-is-description {
     font-size: 5vw;
-    padding: 28px 40px; /* ← aumentado verticalmente no mobile também */
-    background-color: #ffffff;
+    line-height: 1.8;
+    margin-top: 24px;
+    padding: 0 24px;
+    color: #000000;
   }
 
-  .iphone-mockup {
-    width: 90%;
-    max-width: 320px;
-    margin-top: 10px;
+   .buppy-image {
+    width: 100vw;
+    max-width: 1600px;
+    height: auto;
+  }
+
+  .buppy-image-container {
+    margin-top: 32px;
+    text-align: center;
   }
 }
