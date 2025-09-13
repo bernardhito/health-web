@@ -2,9 +2,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth; /* scroll suave nativo */
 }
 
 /* Wrapper */
@@ -12,6 +12,7 @@ html, body {
   position: relative;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .bg-image {
@@ -52,6 +53,12 @@ html, body {
   color: #ffffff;
   font-size: 1vw;
   font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #00bfff;
 }
 
 .download-button {
@@ -78,6 +85,7 @@ html, body {
 .intro-grid {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 4vw;
   flex-wrap: wrap;
 }
@@ -135,20 +143,17 @@ html, body {
   height: auto;
 }
 
-.intro-image {
+/* Imagem iphonecerto à direita */
+.intro-image-right {
   flex: 1;
   min-width: 280px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
 }
 
-.iphone-mockup {
-  width: 1600px;
+.iphone-mockup-right {
+  width: 100vw;
+  max-width: 1600px;
   height: auto;
-  object-fit: contain;
 }
 
 /* Seção "O que é" + logo */
@@ -164,6 +169,7 @@ html, body {
 .what-is-text {
   font-size: 3vw;
   color: #005067;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
@@ -192,44 +198,250 @@ html, body {
 }
 
 .buppy-image {
-  width: 100vw;       /* ← imagem gigante */
-  max-width: 1600px;
+  width: 120vw;
+  max-width: 1800px;
   height: auto;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .section-what-is-inline {
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 320px;
-  }
+/* Texto abaixo da imagem */
+.user-voice-title {
+  text-align: center;
+  font-size: 4vw;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 600px;
+  margin-bottom: 60px;
+}
 
-  .what-is-text {
-    font-size: 6vw;
-    color: #005067;
-  }
+/* ===== Carrossel ===== */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 80px;
+}
 
-  .what-is-inline-logo {
-    width: 320px;
-  }
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
 
-  .what-is-description {
-    font-size: 5vw;
-    line-height: 1.8;
-    margin-top: 24px;
-    padding: 0 24px;
-    color: #000000;
-  }
+.carousel-slide {
+  min-width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-   .buppy-image {
-    width: 100vw;
-    max-width: 1600px;
-    height: auto;
-  }
+.carousel-slide img {
+  width: 80%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
-  .buppy-image-container {
-    margin-top: 32px;
-    text-align: center;
-  }
+/* Botões de navegação */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 80, 103, 0.8);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 80, 103, 1);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* ===== Indicadores ===== */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #005067;
+}
+
+/* Linha horizontal abaixo dos indicadores */
+.carousel-divider {
+  width: 80%;
+  height: 6px;
+  background-color: #ffffff;
+  margin: 250px auto 100px auto;
+  opacity: 0.8;
+  border-radius: 3px;
+}
+
+/* Título Perguntas Frequentes */
+.faq-title {
+  text-align: center;
+  font-size: 4vw;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container das perguntas */
+.faq-container {
+  width: 80%;
+  margin: 0 auto 160px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.faq-item {
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  padding: 40px 24px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.faq-question::after {
+  content: "▼";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question::after {
+  content: "▲";
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-answer.active {
+  max-height: 500px;
+  padding: 16px 24px 24px 24px;
+}
+
+/* Rodapé */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: transparent;
+  border-top: 2px solid #ffffff;
+  padding: 120px 80px;
+  margin-top: 200px;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 280px;
+  margin: 30px;
+}
+
+.footer-logo {
+  width: 240px;
+  margin-bottom: 30px;
+}
+
+.footer-heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.footer-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.footer-contact {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.footer-social {
+  font-size: 1.3rem;
+  margin-top: 24px;
+  opacity: 0.9;
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top-container {
+  text-align: center;
+  margin-top: 40px; /* diminui a distância do botão em relação à última FAQ */
+}
+
+.back-to-top-button {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 20px 40px; /* aumenta a área do botão */
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.6rem; /* aumenta o tamanho da fonte */
+  transition: background 0.3s;
+}
+
+.back-to-top-button:hover {
+  background-color: #00bfff;
 }

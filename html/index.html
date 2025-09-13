@@ -9,17 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="top"></div> <!-- ID do topo -->
+
   <div class="background-wrapper">
     <img src="../img/website +Health.png" alt="Imagem de fundo" class="bg-image">
 
     <div class="header-overlay">
-      <img src="../img/logo health white.png" alt="Logo +Health" class="logo">
-
+      <img src="../img/logohealthwhite.png" alt="Logo +Health" class="logo">
       <div class="nav-texts">
-        <span class="nav-item">Sobre nós</span>
-        <span class="nav-item">Perguntas Frequentes</span>
+        <a href="#sobre-nos" class="nav-item">Sobre nós</a>
+        <a href="#faq" class="nav-item">Perguntas Frequentes</a>
       </div>
-
       <a href="https://play.google.com/store/games?hl=pt_BR" target="_blank" class="download-button">Baixe agora</a>
     </div>
 
@@ -48,13 +48,13 @@
           </div>
         </div>
 
-        <div class="intro-image">
-          <img src="../img/iphonecerto.png" alt="Mockup do app +Health" class="iphone-mockup">
+        <div class="intro-image-right">
+          <img src="../img/iphonecerto.png" alt="Mockup do app +Health" class="iphone-mockup-right">
         </div>
       </div>
 
-      <!-- Seção "O que é" + logo + texto explicativo -->
-      <div class="section-what-is-inline">
+      <!-- Seção "O que é" + logo -->
+      <div class="section-what-is-inline" id="sobre-nos">
         <span class="what-is-text">O que é</span>
         <img src="../img/logoazulhealth.png" alt="Logo azul +Health" class="what-is-inline-logo">
       </div>
@@ -66,11 +66,192 @@
         Nosso objetivo é tornar o cuidado com a saúde prático, prazeroso.
       </div>
 
-      <!-- Imagem iphonecertobuppy abaixo do texto -->
       <div class="buppy-image-container">
         <img src="../img/iphonecertobuppy.png" alt="Mockup iPhone Buppy" class="buppy-image">
       </div>
+
+      <div class="user-voice-title">
+        A voz de quem realmente usa
+      </div>
+
+      <!-- Carrossel -->
+      <div class="carousel-container">
+        <button class="carousel-button prev">&#10094;</button>
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <!-- 12 imagens de avaliação -->
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 1"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 2"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 3"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 4"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 5"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 6"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 7"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 8"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 9"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 10"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 11"></div>
+            <div class="carousel-slide"><img src="../img/avaliacao.png" alt="Avaliação 12"></div>
+          </div>
+        </div>
+        <button class="carousel-button next">&#10095;</button>
+      </div>
+
+      <!-- Bolinhas -->
+      <div class="carousel-indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <!-- Linha branca -->
+      <div class="carousel-divider"></div>
+
+      <!-- FAQ -->
+      <div class="faq-title" id="faq">
+        Perguntas Frequentes
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">Como o +Health ajuda na minha rotina?</button>
+          <div class="faq-answer">O +Health permite que você defina metas, registre treinos e acompanhe sua evolução de forma prática e motivadora.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">O app é gratuito?</button>
+          <div class="faq-answer">Sim! O +Health possui uma versão gratuita com recursos essenciais para sua jornada saudável.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Posso usar o app sem internet?</button>
+          <div class="faq-answer">Algumas funcionalidades estão disponíveis offline, como registro de treinos. Sincronização ocorre quando estiver conectado.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Onde posso baixar o +Health?</button>
+          <div class="faq-answer">Você pode baixar na Play Store e na Apple Store. Os links estão disponíveis logo acima nesta página.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">O +Health tem suporte de nutricionistas?</button>
+          <div class="faq-answer">Não, não possuímos suporte de nutricionistas. O +Health é um app voltado para organização e gestão pessoal.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">É possível acompanhar meu progresso no +Health?</button>
+          <div class="faq-answer">Claro! Você pode acompanhar seu progresso completo dentro do +Health com gráficos e registros semanais.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">O app envia lembretes diários?</button>
+          <div class="faq-answer">Não, porém pensamos em adicionar essa funcionalidade em breve.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">O +Health possui integração com outros apps?</button>
+          <div class="faq-answer">Ainda não, sem previsão para ser incluida essa funcionalidade.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Consigo exportar meus dados do +Health?</button>
+          <div class="faq-answer">Ainda não, pórém será incluida em próximas atualizações do aplicativo.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">O +Health funciona em smartwatch?</button>
+          <div class="faq-answer">Ainda não temos suporte para smartwatch, mas essa funcionalidade está no nosso roadmap.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Existe suporte para diferentes idiomas?</button>
+          <div class="faq-answer">Atualmente o app está disponível em português, sem previsão para suporte em outros.</div>
+        </div>
+
+        <!-- Botão Voltar ao Topo -->
+        <div class="back-to-top-container">
+          <a href="#top" class="back-to-top-button"> Voltar ao topo</a>
+        </div>
+      </div>
+
+      <!-- Rodapé -->
+      <footer class="footer">
+        <div class="footer-column">
+          <img src="../img/logohealthwhite.png" alt="+Health Logo" class="footer-logo">
+          <p class="footer-text">
+            O +Health é seu parceiro na jornada por uma vida mais saudável.<br>
+            Organize sua rotina, acompanhe seus treinos e evolua com leveza.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Contato</h3>
+          <p class="footer-contact">📞 +55 (11) 91234-5678</p>
+          <p class="footer-contact">📧 suporte@maishealth.com</p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Sobre o projeto</h3>
+          <p class="footer-text">
+            Criado para facilitar sua organização pessoal e promover bem-estar.<br>
+            Estamos sempre evoluindo para te acompanhar.
+          </p>
+          <p class="footer-social">Skype: @maishealth • Instagram: @maishealth.app</p>
+        </div>
+      </footer>
     </div>
   </div>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    const dots = document.querySelectorAll('.dot');
+
+    let currentIndex = 0;
+    const slidesToShow = 3;
+    const totalSlides = slides.length;
+    const totalSections = Math.ceil(totalSlides / slidesToShow);
+
+    function updateCarousel() {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const offset = currentIndex * (slideWidth * slidesToShow);
+      track.style.transform = `translateX(-${offset}px)`;
+      updateDots();
+    }
+
+    function updateDots() {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSections;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSections) % totalSections;
+      updateCarousel();
+    }
+
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel();
+      });
+    });
+
+    setInterval(nextSlide, 4000);
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+
+    // FAQ interativo
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const answer = btn.nextElementSibling;
+        answer.classList.toggle('active');
+        item.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
